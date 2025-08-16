@@ -16,4 +16,4 @@ A simple web app for table booking with login/signup system.
 ## How to Run
 1. Clone the repo:
    ```bash
-   git clone https://github.com/your-username/your-repo.git
+   git clone https://github.com/sadanandkonapur/Hyderabad-Restaurant-Pre-Booking-Table.git
