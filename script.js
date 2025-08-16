@@ -22,7 +22,7 @@ function login() {
 
   if (user === storedUser && pass === storedPass) {
     localStorage.setItem("loggedInUser", user);
-    window.location.href = "booking.html";
+    window.location.href = "booking.html"; // redirect to booking page
   } else {
     alert("Invalid credentials. Try again.");
   }
@@ -30,7 +30,7 @@ function login() {
 
 function logout() {
   localStorage.removeItem("loggedInUser");
-  window.location.href = "index.html";
+  window.location.href = "index.html"; // back to login page
 }
 
 function bookTable() {
@@ -40,7 +40,11 @@ function bookTable() {
   const guests = document.getElementById("guests").value;
 
   if (restaurant && date && time && guests) {
-    alert(`Table booked at ${restaurant} on ${date} at ${time} for ${guests} guests!`);
+    // Show confirmation on page
+    const confirmation = document.getElementById("confirmation");
+    confirmation.style.display = "block";
+    document.getElementById("confirmed-table").innerText =
+      `✅ Table booked at ${restaurant} on ${date} at ${time} for ${guests} guests!`;
   } else {
     alert("Please fill all fields.");
   }
