@@ -3,38 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hyderabad Restaurant Booking</title>
+  <title>Hyderabad Restaurant Pre Table Booking</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>Welcome, <span id="usernameDisplay"></span>!</h1>
-    <h2>Book Your Table</h2>
-
+    <h1>Hyderabad Restaurant Pre Table Booking</h1>
     <form>
-      <label for="restaurant">Select Restaurant:</label>
-      <select id="restaurant">
-        <option value="Paradise">Paradise Biryani</option>
-        <option value="Bawarchi">Bawarchi</option>
-        <option value="ShahGhouse">Shah Ghouse</option>
-        <option value="Chutneys">Chutneys</option>
-        <option value="Ohri's">Ohri's</option>
+      <input type="text" placeholder="Enter Your Name" required>
+      <input type="email" placeholder="Enter Your Email" required>
+      <select required>
+        <option value="">Select Restaurant</option>
+        <option value="bawarchi">Bawarchi</option>
+        <option value="paradise">Paradise</option>
+        <option value="shahghouse">Shah Ghouse</option>
+        <option value="chutneys">Chutneys</option>
+        <option value="minerva">Minerva</option>
       </select>
-
-      <label for="date">Date:</label>
-      <input type="date" id="date" required>
-
-      <label for="time">Time:</label>
-      <input type="time" id="time" required>
-
-      <label for="guests">Number of Guests:</label>
-      <input type="number" id="guests" min="1" required>
-
-      <button type="button" onclick="bookTable()">Book Now</button>
-      <button type="button" id="logoutBtn" onclick="logout()">Logout</button>
+      <input type="date" required>
+      <input type="time" required>
+      <button type="submit">Book Table</button>
     </form>
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
